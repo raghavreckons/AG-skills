@@ -17,4 +17,17 @@ This repository contains custom agent skills developed for the **Prescribe** pro
 - **Usage**: Use this skill to instantly view project specs in a clean, readable web interface.
 
 ---
-*Created automatically to package and share custom agent skills.*
+Using custom agent skills reduces token consumption by leveraging pre-defined templates, standardized libraries, and structured workflows. This eliminates the need for the agent to re-invent code, write complex boilerplates from scratch, or engage in multi-turn debugging cycles.
+
+Here is the estimated token usage comparison and savings:
+
+| Custom Skill | Without Skill (Raw Code Gen & Debug Loops) | With Skill (Modular Templates & Scripts) | Estimated Savings (%) | Typical Tokens Saved |
+| :--- | :--- | :--- | :--- | :--- |
+| **[interactive-prototype-feedback](file:///c:/Users/ragha/OneDrive/Desktop/Projects/AG-skills/interactive-prototype-feedback)** | **~15,000 - 25,000 tokens**<br>• Writing custom canvas/overlay logic.<br>• Multiple styling/positioning iterations.<br>• Multi-turn feedback schema design. | **~2,000 - 3,000 tokens**<br>• Loading pre-built feedback overlay code.<br>• Standardized logger integration. | **85%** | **~13,000 - 22,000** |
+| **[sandboxed-prototype-testing](file:///c:/Users/ragha/OneDrive/Desktop/Projects/AG-skills/sandboxed-prototype-testing)** | **~20,000 - 35,000 tokens**<br>• Generating Playwright/Puppeteer configurations.<br>• Writing custom browser test runners.<br>• Iterative debugging of headless errors. | **~3,000 - 5,000 tokens**<br>• Ready-made test harness templates.<br>• Standardized assertions and viewport configs. | **85%** | **~17,000 - 30,000** |
+| **[spec-viewer-setup](file:///c:/Users/ragha/OneDrive/Desktop/Projects/AG-skills/spec-viewer-setup)** | **~8,000 - 12,000 tokens**<br>• Writing custom markdown parsers.<br>• Setting up router and CSS structure.<br>• Debugging Node.js HTTP server. | **~1,000 - 1,500 tokens**<br>• Running a single command with zero-dependency pre-built script. | **88%** | **~7,000 - 10,500** |
+
+### Why these savings occur:
+1. **Zero-Shot Reuse:** The agent avoids writing large boilerplate code segments.
+2. **Fewer Roundtrips:** Standardized templates reduce compilation/syntax errors, minimizing the number of corrective steps.
+3. **Context Optimization:** High-level instructions in `SKILL.md` are extremely compact, reducing input context load compared to full documentation.
